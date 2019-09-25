@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> <%= @user.name %> </title>
+</head>
+<body>
+    <h1> <%= @user.name %>: </h1>
+    <div class="message">
+            <h2>You have: <%=@user.teams.count%> teams.</h2>
+    </div>
+    <div class="team_container">
+        <div class="list_team">
+            <% @user.teams.each do |team| %>
+                <% team.characters.each do |character| %>
+                    <ul>
+                        <li>TEAM: <%= character.team.name %> - CHARACTER: <%= link_to character.name, character_path(character) %></li>
+                    </ul>
+                <% end %>
+            <% end %>
+
+            <div class="button_campaign"><%= button_to "Start a campaign", new_team_path, method: :get%></div>
+        </div>
+        </div>
+    
+</body>
+</html>
+
+
+
+
+

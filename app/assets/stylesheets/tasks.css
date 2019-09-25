@@ -1,0 +1,108 @@
+html {
+    height: 100%;
+    background-image: url('/assets/landscape.png'); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: cover;
+    background-color: black;
+  }
+
+  .h1task {
+      margin: 2em auto 0;
+  }
+
+.game_on {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+.game_on ul {
+    padding: 0;
+    margin: 0;
+}
+
+.game_on ul li {
+      display: inline-block;
+      background-color: white;
+      width: 4em;
+      text-align: center; 
+      padding: 0.5em;
+  }
+
+  .game_on ul li a {
+    color: black;
+  }
+
+  .game_on ul li:hover {
+    background-color: orange;
+  }
+
+ .situation {
+     width: 70%;
+     margin: 0 auto;
+     padding: 0;
+ }
+
+ .situation p {
+     font-size: 40px;
+     color: white;
+     text-align: justify;
+     padding: 0;
+ }
+
+ .task_form {
+     position:relative;
+ }
+
+  .task_form form {
+      position:absolute;
+      top: 2em;
+      left: 10em;
+      padding: 0;
+      text-align: left;
+  }
+
+  .task_form label {
+    color: white;
+}
+
+.task_form input {
+    display: inline-block;
+}
+
+.label {
+    margin-bottom: 2em;
+}
+
+.you_won {
+    font-size: 2em;
+    color: #f6a70e;
+    text-align: center;
+}
+
+
+.link_to_user {
+    width: 5em;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f6a70e;
+    padding: .5em;
+}
+
+form input[type=submit] {
+    background: #9d9480;
+    border-width: 0;
+    width: auto;
+    padding: 1em;
+    font-family: 'Monda', sans-serif;
+    font-size: .65em;
+    font-weight: bolder;
+    margin: 3em auto;
+    transition: box-shadow .5s;
+  }
+  
+  form input[type=submit]:focus,
+  form input[type=submit]:active {
+    box-shadow: 0 0 0 5px #5f5a4e;
+  }

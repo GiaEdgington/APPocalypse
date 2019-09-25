@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Login</title>
+  <%= stylesheet_link_tag "auth.css" if controller_name == "auth" %>
+</head>
+<body>
+    <div id="logo"><img src = "assets/appocalypse.gif" alt=""/></div>
+      <%= form_tag "/auth" do %>
+      <%= label_tag 'Username' %>
+      <%= text_field_tag :username %>
+      <%= label_tag 'Password' %>
+      <%= password_field_tag :password %>
+      <%= submit_tag "Log In" %>
+    <% end %>
+</body>
+</html>

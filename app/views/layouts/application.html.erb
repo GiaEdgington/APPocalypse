@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ApocGame</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="top_bar">
+      <ul>
+        <li class="register"><%= link_to "Register", "/users/new", :style=>'color: white;'%></li>
+        <li class="logout"><%= button_to "Log Out", "/auth", :style=>'color: white;float:right;background-color:black;font-size:1em;padding:1em;', method: :delete %></li>
+      </ul>
+
+    </div>
+    <header> 
+      <% if @logged_in %>
+        <div class="logged_in"><p> 
+          Logged in as: <%=@current_user.name %> 
+        </p></div>
+        <% else  %>
+          <div id="login"><%= link_to "login", "/login" %></div>
+          <div id="signup"><%= link_to "sign_up", new_user_path %></div>
+        <% end %>
+      </header>
+    <%= yield %>
+  </body>
+</html>
